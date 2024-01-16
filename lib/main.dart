@@ -42,13 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
           width: double.infinity,
           child: Column(
             //  Columns can have the content centered like so:
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            //  ( Think of a Column like a totem pole, stacking widgets vertically )
+            mainAxisAlignment: MainAxisAlignment.center,    //  "main" axis is vertical for a Column
+            crossAxisAlignment: CrossAxisAlignment.center,  //  "cross" axis is horizontal for a Column
             children: [
               //  Text( 'image' ),
               Container(
-                //  This is where the magic happens... this container
-                //  sets the logo to be ⅓ the image height
+                //  This is where the magic happens... this Container
+                //  forces the logo image to be ⅓ the screen height
                 height: (MediaQuery.of(context).size.height)/3,
                 width: double.infinity,
                 decoration: const BoxDecoration(
