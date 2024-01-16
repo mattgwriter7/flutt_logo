@@ -32,18 +32,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        //  set underlying Container to take up the entire screen
+        //  ( only width needed for this )        
         body: Container(
           color: Colors.green,
           width: double.infinity,
           child: Column(
+            //  Columns can have the content centered like so:
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //  Text( 'image' ),
               Container(
-                //  This is where the magic happens... the this container
+                //  This is where the magic happens... this container
                 //  sets the logo to be half the image height
-                //  color: Colors.blue,
                 height: (MediaQuery.of(context).size.height)/3,
                 width: double.infinity,
                 decoration: const BoxDecoration(
@@ -54,13 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       fit: BoxFit.fitHeight),
                 ),                
               ),  
+              //  This passing is to vertically space the text from the image
+              //  above. (I like to use EdgeInsets.fromLTRB for max control, Son!)
+              //  Note: You may want to add Padding to image, too (especially
+              //        if you use MainAxisAlignment.start...)              
               Padding(
                 padding: const EdgeInsets.fromLTRB(0,20,0,0),
-                child: Text( 'some text' ),
+                child: Text( 'some text!' ),
               ),
             ],
           ),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
+        ),  
       ),
     );
   }
