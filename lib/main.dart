@@ -32,9 +32,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        //  set underlying Container to take up the entire screen
-        //  ( only width needed for this )        
         body: Container(
+        //  set underlying Container to take up the entire screen
+        //  ( only width needed for this, cuz the child Column will push height... ) 
           color: Colors.green,
           width: double.infinity,
           child: Column(
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //  Text( 'image' ),
               Container(
                 //  This is where the magic happens... this container
-                //  sets the logo to be half the image height
+                //  sets the logo to be ⅓ the image height
                 height: (MediaQuery.of(context).size.height)/3,
                 width: double.infinity,
                 decoration: const BoxDecoration(
