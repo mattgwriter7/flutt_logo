@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//  This code is literally from the "flutter create" boilerplate,
+//  but I removed the counter app (and kept the underlying structure).
+
 void main() {
   runApp(const MyApp());
 }
@@ -56,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fit: BoxFit.fitHeight),
                 ),                
               ),  
-              //  This passing is to vertically space the text from the image
+              //  This padding is to vertically space the text from the image
               //  above. (I like to use EdgeInsets.fromLTRB for max control, Son!)
               //  Note: You may want to add Padding to image, too (especially
               //        if you use MainAxisAlignment.start...)              
