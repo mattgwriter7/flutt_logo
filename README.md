@@ -5,3 +5,7 @@ Showing a colleague how to responsively show a logo with text...
 
 ## Notes    
 There are comments in the code where the "magic" happens! ;) 
+
+In a nutshell: The image will always be:   
+* ⅓ the screen height   
+* centered vertically and horizontally   
